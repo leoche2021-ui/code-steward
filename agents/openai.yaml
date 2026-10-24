@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Steward"
+  short_description: "Harden and simplify code with concrete evidence"
+  default_prompt: "Use $code-steward to harden this change, fix demonstrated issues, and report the verification evidence."
