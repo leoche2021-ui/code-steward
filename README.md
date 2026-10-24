@@ -43,6 +43,10 @@ The agent establishes scope and a validation baseline, traces the affected behav
 
 A representative finding might be a stale asynchronous response overwriting a newer result. A useful fix would enforce the intended ownership of the result and add a test that reproduces competing responses. Simply renaming variables or adding a test that checks source text would not address that failure.
 
+## Choices during the pass
+
+When a finding requires your decision about behavior, compatibility, scope, or cost, the agent uses the available question tool with two or three options, a recommendation, and concrete tradeoffs. It can ask throughout the pass while continuing independent checks. Your answer guides the dependent change; routine authorized fixes proceed directly.
+
 ## Expected report
 
 The final report distinguishes:

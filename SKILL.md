@@ -2,7 +2,7 @@
 name: code-steward
 description: Perform an evidence-based hardening and simplification pass on an implementation or worktree. Use when asked to review and fix correctness, regression coverage, lifecycle failures, or unnecessary complexity after implementation. Keep changes within the requested behavior and affected surface.
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Code Steward
@@ -39,6 +39,12 @@ Reduce duplicate sources of truth when they actually create synchronization risk
 Before deleting a material path, check dynamic use and external obligations. Absence from a text search does not prove an exported API is unused. Preserve validation, accessibility, authorization, isolation, persistence compatibility, and cleanup unless their replacement or redundancy is established. A supported capability removal needs authorization for that behavior change.
 
 Do not add dependencies, redesign architecture, remove features, alter public contracts, or change persistent data merely to make cleanup easier. Propose out-of-scope changes separately while completing in-scope work.
+
+## Ask when the user owns the tradeoff
+
+Use an available structured question tool at any stage when a finding exposes a meaningful choice about intended behavior, compatibility, scope, or engineering cost that existing instructions do not settle. Present two or three feasible options, recommend one with a concrete reason, and explain the practical consequence of each. Respect the host tool limits and allow a custom answer. If no suitable tool is available, ask a concise multiple-choice question in the conversation.
+
+Investigate facts first. Continue already authorized fixes and independent checks while a question is pending; wait for a required answer before making the dependent change. Do not treat silence or a preselected option as approval, repeat settled choices, or ask the user to decide routine implementation details. Use the required approval mechanism for actions needing permission.
 
 ## Verify behavior
 
